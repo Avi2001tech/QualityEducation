@@ -3,7 +3,7 @@
     android:id="@+id/mainLayout"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/background"
+    android:background="@drawable/settings_background"
     android:orientation="vertical">
 
     <LinearLayout
@@ -29,7 +29,7 @@
                 <ImageView
                     android:id="@+id/iv_kids"
                     android:layout_width="wrap_content"
-                    android:layout_height="100dp" />
+                    android:layout_height="180dp" />
             </LinearLayout>
 
             <ImageView

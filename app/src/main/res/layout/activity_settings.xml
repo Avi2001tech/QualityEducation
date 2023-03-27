@@ -5,7 +5,7 @@
     android:id="@+id/rootlay"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/settings_background"
     android:orientation="vertical">
 
     <LinearLayout
@@ -22,26 +22,6 @@
             android:layout_height="wrap_content">
 
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="310dp"
-                android:layout_height="190dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="40dp"
-                android:contentDescription="TODO"
-                android:src="@drawable/kids_gif" />
-
-
-            <ImageView
-                android:id="@+id/text"
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_below="@+id/imageView"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="-60dp"
-                android:src="@drawable/llgame" />
         </RelativeLayout>
 
         <LinearLayout

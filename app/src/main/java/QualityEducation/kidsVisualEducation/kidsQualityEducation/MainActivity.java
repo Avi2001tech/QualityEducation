@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         ivKids = findViewById(R.id.iv_kids);
         Glide.with(getApplicationContext())
-                .load(R.drawable.kids_gif)
+                .load(R.drawable.welcome)
                 .into(ivKids);
         numId = findViewById(R.id.numId);
         Glide.with(getApplicationContext())
