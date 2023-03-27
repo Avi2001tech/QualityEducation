@@ -46,6 +46,8 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         SharedPreferences preferences = getSharedPreferences(prefNname, MODE_PRIVATE);
         vibration = preferences.getBoolean(prefVibration, true);
 
