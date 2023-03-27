@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="QualityEducation.kidsVisualEducation.kidsQualityEducation">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9731420309932281~5955996158"/>
+        <activity android:name="QualityEducation.kidsVisualEducation.kidsQualityEducation.activity.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="QualityEducation.kidsVisualEducation.kidsQualityEducation.MainActivity"/>
+        <activity android:name="QualityEducation.kidsVisualEducation.kidsQualityEducation.FruitsActivity"/>
+        <activity android:name="QualityEducation.kidsVisualEducation.kidsQualityEducation.AlphabetActivity"/>
+        <activity android:name="QualityEducation.kidsVisualEducation.kidsQualityEducation.NumberActivity"/>
+        <activity android:name="QualityEducation.kidsVisualEducation.kidsQualityEducation.KnowledgeActivity"/>
+        <activity android:name="QualityEducation.kidsVisualEducation.kidsQualityEducation.DrawingActivity"/>
+        <activity android:name="QualityEducation.kidsVisualEducation.kidsQualityEducation.activity.SettingsActivity"/>
+
+        <service
+            android:name="QualityEducation.kidsVisualEducation.kidsQualityEducation.util.BackgroundSoundService"
+            android:enabled="true" />
+    </application>
+
+
+
+</manifest>
