@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/mainLayout"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/settings_background"
+    android:background="@drawable/background"
     android:orientation="vertical">
 
     <LinearLayout
@@ -402,7 +402,7 @@
 
     </LinearLayout>
 
-    <include layout="@layout/banner_adds_facebook" />
+<!--    <include layout="@layout/banner_adds_facebook" />-->
 
 
 </LinearLayout>

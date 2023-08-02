@@ -6,6 +6,7 @@
         <entry key="..\:/KidsLearningGame/app/src/main/res/drawable/welcome.xml" value="0.1645" />
         <entry key="..\:/KidsLearningGame/app/src/main/res/layout/activity_main.xml" value="0.23229166666666667" />
         <entry key="..\:/KidsLearningGame/app/src/main/res/layout/activity_settings.xml" value="0.22864583333333333" />
+        <entry key="..\:/KidsLearningGame/app/src/main/res/layout/activity_splash.xml" value="0.23229166666666667" />
         <entry key="..\:/KidsLearningGame/app/src/main/res/layout/banner_adds_facebook.xml" value="0.22864583333333333" />
         <entry key="..\:/KidsLearningGame/app/src/main/res/layout/spinner_item.xml" value="0.23229166666666667" />
         <entry key="..\:/KidsLearningGame/app/src/main/res/layout/taw_activity_detail.xml" value="0.23229166666666667" />
@@ -13,6 +14,7 @@
         <entry key="..\:/KidsLearningGame/app/src/main/res/layout/taw_activity_month.xml" value="0.23229166666666667" />
         <entry key="..\:/KidsLearningGame/app/src/main/res/layout/taw_activity_number.xml" value="0.23229166666666667" />
         <entry key="..\:/KidsLearningGame/app/src/main/res/layout/taw_drawing.xml" value="0.23229166666666667" />
+        <entry key="..\:/KidsLearningGame/app/src/main/res/menu/tawmain.xml" value="0.23229166666666667" />
       </map>
     </option>
   </component>

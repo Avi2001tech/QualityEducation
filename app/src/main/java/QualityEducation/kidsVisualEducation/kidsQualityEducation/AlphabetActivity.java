@@ -34,8 +34,8 @@ public class AlphabetActivity extends Activity implements OnClickListener, OnTou
     private int totalItem = 0;
     private MediaPlayer mp = null;
     ResourcePool resourcePool = new ResourcePool();
-    private AdView adView;
-    private InterstitialAd interstitialAd;
+    //private AdView adView;
+    //private InterstitialAd interstitialAd;
 
 
     @Override
@@ -49,18 +49,18 @@ public class AlphabetActivity extends Activity implements OnClickListener, OnTou
             w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         }
 
-        adView = findViewById(R.id.ad_view);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
+//        adView = findViewById(R.id.ad_view);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        adView.loadAd(adRequest);
 
         Intent svc = new Intent(this, BackgroundSoundService.class);
         svc.putExtra("isPlay", false);
         startService(svc);
 
-		interstitialAd = new InterstitialAd(this);
-		interstitialAd.setAdUnitId(getString(R.string.google_interstitial));
-		loadinterstitilal();
-        load1();
+//		interstitialAd = new InterstitialAd(this);
+//	interstitialAd.setAdUnitId(getString(R.string.google_interstitial));
+//		loadinterstitilal();
+//        load1();
 
         nextBtn = (ImageView) findViewById(R.id.nextId);
         playBtn = (ImageView) findViewById(R.id.playId);
@@ -194,7 +194,7 @@ public class AlphabetActivity extends Activity implements OnClickListener, OnTou
         if (count.equals("1111")) {
 
             prefssss.edit().clear().commit();
-            showInterstitial();
+            //showInterstitial();
 
         }
     }
@@ -205,39 +205,39 @@ public class AlphabetActivity extends Activity implements OnClickListener, OnTou
         startActivity(intent);
     }
 
-    private void loadinterstitilal() {
-        interstitialAd.setAdListener(
-                new AdListener() {
-                    @Override
-                    public void onAdLoaded() {
-//dosomething
-                    }
-
-                    @Override
-                    public void onAdFailedToLoad(LoadAdError loadAdError) {
-                       //dosomething
-                    }
-
-                    @Override
-                    public void onAdClosed() {
-                        load1();
-                    }
-                });
-    }
-
-    private void load1() {
-        if (!interstitialAd.isLoading() && !interstitialAd.isLoaded()) {
-            AdRequest adRequest1 = new AdRequest.Builder().build();
-            interstitialAd.loadAd(adRequest1);
-        }
-
-    }
+//    private void loadinterstitilal() {
+//        interstitialAd.setAdListener(
+//                new AdListener() {
+//                    @Override
+//                    public void onAdLoaded() {
+////dosomething
+//                    }
+//
+//                    @Override
+//                    public void onAdFailedToLoad(LoadAdError loadAdError) {
+//                       //dosomething
+//                    }
+//
+//                    @Override
+//                    public void onAdClosed() {
+//                        load1();
+//                    }
+//                });
+//    }
+//
+//    private void load1() {
+//        if (!interstitialAd.isLoading() && !interstitialAd.isLoaded()) {
+//            AdRequest adRequest1 = new AdRequest.Builder().build();
+//            interstitialAd.loadAd(adRequest1);
+//        }
+//
+//    }
 
     @Override
     public void onPause() {
-        if (adView != null) {
-            adView.pause();
-        }
+//        if (adView != null) {
+//            adView.pause();
+//        }
         super.onPause();
     }
 
@@ -247,9 +247,9 @@ public class AlphabetActivity extends Activity implements OnClickListener, OnTou
     @Override
     public void onResume() {
         super.onResume();
-        if (adView != null) {
-            adView.resume();
-        }
+//        if (adView != null) {
+//            adView.resume();
+//        }
     }
 
     /**
@@ -257,20 +257,20 @@ public class AlphabetActivity extends Activity implements OnClickListener, OnTou
      */
     @Override
     public void onDestroy() {
-        if (adView != null) {
-            adView.destroy();
-        }
+//        if (adView != null) {
+//            adView.destroy();
+//        }
         super.onDestroy();
     }
 
-    private void showInterstitial() {
-        // Show the ad if it's ready. Otherwise toast and restart the game.
-        if (interstitialAd != null && interstitialAd.isLoaded()) {
-            interstitialAd.show();
-        } else {
-//dosomething
-        }
-    }
+//    private void showInterstitial() {
+//        // Show the ad if it's ready. Otherwise toast and restart the game.
+//        if (interstitialAd != null && interstitialAd.isLoaded()) {
+//            interstitialAd.show();
+//        } else {
+////dosomething
+//        }
+//    }
 
 
 }
