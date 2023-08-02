@@ -205,39 +205,9 @@ public class AlphabetActivity extends Activity implements OnClickListener, OnTou
         startActivity(intent);
     }
 
-//    private void loadinterstitilal() {
-//        interstitialAd.setAdListener(
-//                new AdListener() {
-//                    @Override
-//                    public void onAdLoaded() {
-////dosomething
-//                    }
-//
-//                    @Override
-//                    public void onAdFailedToLoad(LoadAdError loadAdError) {
-//                       //dosomething
-//                    }
-//
-//                    @Override
-//                    public void onAdClosed() {
-//                        load1();
-//                    }
-//                });
-//    }
-//
-//    private void load1() {
-//        if (!interstitialAd.isLoading() && !interstitialAd.isLoaded()) {
-//            AdRequest adRequest1 = new AdRequest.Builder().build();
-//            interstitialAd.loadAd(adRequest1);
-//        }
-//
-//    }
 
     @Override
     public void onPause() {
-//        if (adView != null) {
-//            adView.pause();
-//        }
         super.onPause();
     }
 
@@ -247,9 +217,6 @@ public class AlphabetActivity extends Activity implements OnClickListener, OnTou
     @Override
     public void onResume() {
         super.onResume();
-//        if (adView != null) {
-//            adView.resume();
-//        }
     }
 
     /**
@@ -257,20 +224,9 @@ public class AlphabetActivity extends Activity implements OnClickListener, OnTou
      */
     @Override
     public void onDestroy() {
-//        if (adView != null) {
-//            adView.destroy();
-//        }
         super.onDestroy();
     }
 
-//    private void showInterstitial() {
-//        // Show the ad if it's ready. Otherwise toast and restart the game.
-//        if (interstitialAd != null && interstitialAd.isLoaded()) {
-//            interstitialAd.show();
-//        } else {
-////dosomething
-//        }
-//    }
 
 
 }

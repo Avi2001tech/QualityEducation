@@ -34,9 +34,8 @@ public class NumberActivity extends Activity implements OnClickListener, OnTouch
     private int currentPosition = 0;
     private int totalItem = 0;
     private MediaPlayer mp = null;
-   // private AdView adView;
     ResourcePool resourcePool = new ResourcePool();
-   // private InterstitialAd interstitialAd;
+
 
 
     @Override
@@ -50,18 +49,11 @@ public class NumberActivity extends Activity implements OnClickListener, OnTouch
             w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         }
 
-//        adView = findViewById(R.id.ad_view);
-//        AdRequest adRequest = new AdRequest.Builder().build();
-//        adView.loadAd(adRequest);
+
 
         Intent svc = new Intent(this, BackgroundSoundService.class);
         svc.putExtra("isPlay", false);
         startService(svc);
-
-//        interstitialAd = new InterstitialAd(this);
-//        interstitialAd.setAdUnitId(getString(R.string.google_interstitial));
-//        loadinterstitilal();
-//        load1();
 
 
         nextBtn = (ImageView) findViewById(R.id.nextId);
@@ -86,35 +78,6 @@ public class NumberActivity extends Activity implements OnClickListener, OnTouch
         mp.start();
 
     }
-
-//    private void load1() {
-//        if (!interstitialAd.isLoading() && !interstitialAd.isLoaded()) {
-//            AdRequest adRequest1 = new AdRequest.Builder().build();
-//            interstitialAd.loadAd(adRequest1);
-//        }
-//
-//    }
-//
-//    private void loadinterstitilal() {
-//        interstitialAd.setAdListener(
-//                new AdListener() {
-//                    @Override
-//                    public void onAdLoaded() {
-//                        //dosomething
-//                    }
-//
-//                    @Override
-//                    public void onAdFailedToLoad(LoadAdError loadAdError) {
-//                       //dosomething
-//
-//                    }
-//
-//                    @Override
-//                    public void onAdClosed() {
-//                        load1();
-//                    }
-//                });
-//    }
 
 
     @Override
@@ -225,7 +188,7 @@ public class NumberActivity extends Activity implements OnClickListener, OnTouch
             prefssss.edit().clear().commit();
 
 
-            //showInterstitial();
+
 
 
         }
@@ -240,9 +203,7 @@ public class NumberActivity extends Activity implements OnClickListener, OnTouch
 
     @Override
     public void onPause() {
-//        if (adView != null) {
-//            adView.pause();
-//        }
+
         super.onPause();
     }
 
@@ -252,9 +213,7 @@ public class NumberActivity extends Activity implements OnClickListener, OnTouch
     @Override
     public void onResume() {
         super.onResume();
-//        if (adView != null) {
-//            adView.resume();
-//        }
+
     }
 
     /**
@@ -262,20 +221,7 @@ public class NumberActivity extends Activity implements OnClickListener, OnTouch
      */
     @Override
     public void onDestroy() {
-//        if (adView != null) {
-//            adView.destroy();
-//        }
         super.onDestroy();
     }
-
-//    private void showInterstitial() {
-//        // Show the ad if it's ready. Otherwise toast and restart the game.
-//        if (interstitialAd != null && interstitialAd.isLoaded()) {
-//            interstitialAd.show();
-//        } else {
-//
-//        }
-//    }
-
 
 }

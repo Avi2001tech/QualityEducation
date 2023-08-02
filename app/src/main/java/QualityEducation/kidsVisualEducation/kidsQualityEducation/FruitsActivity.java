@@ -42,9 +42,7 @@ public class FruitsActivity extends Activity implements OnClickListener, OnTouch
     private int currentPosition = 0;
     private int totalItem = 0;
     private MediaPlayer mediaPlayer = null;
-    private AdView adView;
     ResourcePool resourcePool = new ResourcePool();
-    private InterstitialAd interstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,19 +59,9 @@ public class FruitsActivity extends Activity implements OnClickListener, OnTouch
         mRewardedVideoAd.setRewardedVideoAdListener(this);
         loadRewardedVideoAd();
 
-        adView = findViewById(R.id.ad_view);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
-
         Intent svc = new Intent(this, BackgroundSoundService.class);
         svc.putExtra("isPlay", false);
         startService(svc);
-
-        interstitialAd = new InterstitialAd(this);
-        interstitialAd.setAdUnitId(getString(R.string.google_interstitial));
-        loadinterstitilal();
-
-        load1();
 
 
         Bundle bundle = getIntent().getExtras();
@@ -208,7 +196,6 @@ public class FruitsActivity extends Activity implements OnClickListener, OnTouch
         if (count.equals("1111")) {
 
             prefssss.edit().clear().commit();
-            showInterstitial();
 
         }
     }
@@ -355,39 +342,9 @@ public class FruitsActivity extends Activity implements OnClickListener, OnTouch
         }
     }
 
-    private void loadinterstitilal() {
-        interstitialAd.setAdListener(
-                new AdListener() {
-                    @Override
-                    public void onAdLoaded() {
-//dosomething
-                    }
-
-                    @Override
-                    public void onAdFailedToLoad(LoadAdError loadAdError) {
-                        //dosomething
-                    }
-
-                    @Override
-                    public void onAdClosed() {
-                        load1();
-                    }
-                });
-    }
-
-    private void load1() {
-        if (!interstitialAd.isLoading() && !interstitialAd.isLoaded()) {
-            AdRequest adRequest1 = new AdRequest.Builder().build();
-            interstitialAd.loadAd(adRequest1);
-        }
-
-    }
 
     @Override
     public void onPause() {
-        if (adView != null) {
-            adView.pause();
-        }
         super.onPause();
     }
 
@@ -397,9 +354,7 @@ public class FruitsActivity extends Activity implements OnClickListener, OnTouch
     @Override
     public void onResume() {
         super.onResume();
-        if (adView != null) {
-            adView.resume();
-        }
+
     }
 
     /**
@@ -407,20 +362,11 @@ public class FruitsActivity extends Activity implements OnClickListener, OnTouch
      */
     @Override
     public void onDestroy() {
-        if (adView != null) {
-            adView.destroy();
-        }
+
         super.onDestroy();
     }
 
-    private void showInterstitial() {
-        // Show the ad if it's ready. Otherwise toast and restart the game.
-        if (interstitialAd != null && interstitialAd.isLoaded()) {
-            interstitialAd.show();
-        } else {
-//dosomething
-        }
-    }
+
 
     @Override
     public void onRewarded(RewardItem reward) {
